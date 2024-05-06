@@ -1,0 +1,8 @@
+Sub SortNewest()
+ Range("F8:F335").Sort Key1:=Range("F8"), _
+                     Order1:=xlDescending, _
+                     Header:=xlYes
+                     
+                         
+                     
+End Sub
