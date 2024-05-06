@@ -1,0 +1,10 @@
+Sub SortHighProjectNum()
+'
+' SortHighestProjectNum Macro
+' Updated 06.01.23 - BJ
+
+'
+    
+Range("$A$8:$A$636").Sort Key1:=Range("A8"), _
+                     Order1:=xlDescending, _
+                     Header:=xlYes
