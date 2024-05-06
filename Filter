@@ -1,0 +1,10 @@
+Sub HideClosedWonLostEtc()
+'
+' FilterOutClosedWonLostSubmittedPaused Macro
+' Updated 04.29.24 by Brad Julao
+'
+    ActiveSheet.ListObjects("Table1").Range.AutoFilter Field:=15, Criteria1:= _
+        Array("Active", "Submitted", "Develop", "New", "Pending", "="), Operator:=xlFilterValues
+
+'
+End Sub
