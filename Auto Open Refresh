@@ -1,0 +1,16 @@
+
+Sub Auto_Open()
+'Prompts the user and refreshes data for entire workbook
+
+ActiveWorkbook.RefreshAll
+
+' FilterOutClosedWonLostPaused
+    ActiveSheet.ListObjects("Table1").Range.AutoFilter Field:=15, Criteria1:= _
+         Array("Active", "Submitted", "Develop", "New", "Pending", "="), Operator:=xlFilterValues
+
+' Message to prompt the user of the prior code.
+
+MsgBox "Welcome to The Weekly Estimating Meeting!" & vbNewLine & vbNewLine & "The Workbook has been refreshed" & vbNewLine & vbNewLine & "Filters have been applied" & vbNewLine & vbNewLine & "Revision 12/06/23."
+
+
+End Sub
