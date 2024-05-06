@@ -1,0 +1,8 @@
+Sub NewEntry()
+'
+' NewEntry Macro
+' Updated 06.01.23 - BJ
+
+Range("A8").EntireRow.Insert
+
+End Sub
