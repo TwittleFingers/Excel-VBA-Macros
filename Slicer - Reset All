@@ -1,0 +1,23 @@
+Sub ResetAll()
+' ResetFilters Macro
+' Updated 06.01.23 - BJ
+
+Dim slcr As SlicerCache
+ Dim slc As Slicer
+
+ Application.ScreenUpdating = False
+
+ For Each slcr In ActiveWorkbook.SlicerCaches
+   For Each slc In slcr.Slicers
+      If slc.Shape.Parent Is ActiveSheet Then
+         If slcr.FilterCleared = False Then
+            slcr.ClearManualFilter
+            Exit For
+         End If
+      End If
+   Next slc
+ Next slcr
+
+ Application.ScreenUpdating = True
+
+End Sub
