@@ -1,0 +1,41 @@
+Option Explicit
+' START Refresh Button Code
+'Refresh Button to transfer data to accessory data sheets
+
+Sub Refresh_All_Button()
+ActiveWorkbook.RefreshAll
+
+' END Refresh Button Code
+
+' START Adjust Closed_Lost Columns
+
+    With Sheets("Closed_Lost")
+    .Columns("A:A").ColumnWidth = 7 'Column A
+    .Columns("B:B").ColumnWidth = 36 'Column B
+    .Columns("C:C").ColumnWidth = 4 'Column C
+    .Columns("D:D").ColumnWidth = 12 'Column D
+    .Columns("E:E").ColumnWidth = 12 'Column E
+    .Columns("I:I").ColumnWidth = 25 'Column I
+    .Columns("J:K").ColumnWidth = 12 'Column J, K, & L
+    .Columns("Q:Q").ColumnWidth = 10 'Column Q
+    .Columns("R:S").ColumnWidth = 35 'Column R & S
+
+    .Columns("T:T").ColumnWidth = 8 'Column T
+    End With
+' END Adjust Closed_Lost Columns
+
+
+' START SORT
+ Range("$A$10:$A$237").Sort Key1:=Range("A10"), _
+                     Order1:=xlDescending, _
+                     Header:=xlYes
+
+' END SORT
+
+End Sub
+
+
+ 
+ 
+
+
