@@ -1,0 +1,13 @@
+Option Explicit
+
+Sub Button1_Click()
+'Copy First Revision
+    Dim s_SourceRange As String
+    Dim s_DestRange As String
+    s_SourceRange = "G6:G50"
+    s_DestRange = "L6:L50"
+
+    ' Copy the values from the source range to the destination range
+    Sheets("Long Form").Range(s_DestRange).Value = Sheets("Long Form").Range(s_SourceRange).Value
+    
+End Sub
